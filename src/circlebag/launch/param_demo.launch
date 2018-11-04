@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="circlebag" name="param_demo" type="param_demo" output="screen"/>
+    <!--<param name="param1" type="string" value="10" />
+    <param name="param2" type="int" value="100" />-->
+    
+</launch>

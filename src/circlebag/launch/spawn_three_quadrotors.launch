@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<launch>
+   <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro" />
+
+   <group ns="uav1">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav1" />
+       <arg name="tf_prefix" value="uav1" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="0.0" />
+     </include>
+   <node pkg="control" name="posecontrol3" type="posecontrol3"/>
+   </group>
+
+   <group ns="uav2">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav2" />
+       <arg name="tf_prefix" value="uav2" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="1.0" />
+     </include>
+   <node pkg="control" name="posecontrol3" type="posecontrol3"/>
+   </group>
+
+   <group ns="uav3">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav3" />
+       <arg name="tf_prefix" value="uav3" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="2.0" />
+     </include>
+   <node pkg="control" name="posecontrol3" type="posecontrol3"/>
+   </group>
+
+   <node pkg="circlebag" name="circle" type="circle" output="screen"/>
+   <node pkg="circlebag" name="transform1" type="transform1"/>
+
+
+</launch>
+

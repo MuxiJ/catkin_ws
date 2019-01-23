@@ -35,8 +35,8 @@
 
    <group ns="PC">
      <node pkg="formationbag" name="Formation_leader" type="Formation_leader"/>
-     <!--<node pkg="formationbag" name="horizon_ctrl" type="horizon_ctrl" output="screen"/>
-     <node pkg="formationbag" name="vertical_ctrl" type="vertical_ctrl" output="screen"/>-->
+     <node pkg="formationbag" name="horizon_ctrl" type="horizon_ctrl" output="screen"/>
+     <node pkg="formationbag" name="vertical_ctrl" type="vertical_ctrl" output="screen"/>
      <node pkg="formationbag" name="circle_ctrl" type="circle_ctrl" output="screen"/>     
    </group>
 
